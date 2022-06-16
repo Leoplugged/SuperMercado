@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="@{name}" type="br.com.zup.caixasupermercado.model.Product"/>
+        <variable name="qty" type="br.com.zup.caixasupermercado.model.Product"/>
+        <variable name="unitaryValue" type="br.com.zup.caixasupermercado.model.Product"/>
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PurchasingDetail">
+
+    <ImageView
+        android:id="@+id/iwCart"
+        android:layout_width="@dimen/image_size_125"
+        android:layout_height="@dimen/image_size_125"
+        android:layout_margin="@dimen/standard_margin"
+        android:contentDescription="@string/cd_cart"
+        android:src="@drawable/cart"
+        app:layout_constraintWidth="match_parent"
+        tools:layout_editor_absoluteY="@dimen/margin_250" />
+
+    <TextView
+        android:id="@+id/tvTotalValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/standard_margin"
+        android:text="@string/tv_total_value"
+        android:textAllCaps="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iwCart"
+        app:layout_constraintVertical_bias="0.18" />
+
+    <Button
+        android:backgroundTint="@color/red"
+        android:id="@+id/btnRecalculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/standard_margin"
+        android:text="@string/btn_recalculate"
+        android:textAllCaps="true"
+        app:layout_constraintTop_toBottomOf="@+id/tvTotalValue"
+        tools:layout_editor_absoluteX="@dimen/standard_margin" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
